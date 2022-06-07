@@ -29,7 +29,7 @@ class News extends StatelessWidget{
         children: [
           Container(
             padding: EdgeInsets.all(10),
-            child: Text("Новости", style: TextStyle(fontSize: 36)),
+            child: Text("Новости", style: TextStyle(fontSize: 28)),
           ),
           Expanded(
             child: Scrollbar(
