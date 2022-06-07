@@ -20,7 +20,9 @@ class _HostelPage extends State<HostelPage>{
       bloc: mainBloc,
       listener: (context, state) => _listener(context, state),
       builder: (context, state) {
-            return Scaffold(
+
+    return Scaffold(
+
       body: Column(
         children: [
           Container(
@@ -193,6 +195,7 @@ class _HostelPage extends State<HostelPage>{
           )
         ],
       ),
+    
     );
   
       });

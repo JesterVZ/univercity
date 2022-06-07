@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:univercity_application/pages/library.dart';
 
 import '../elements/news_element.dart';
 import 'hostel.dart';
@@ -43,7 +44,9 @@ class More extends StatelessWidget{
                         style: ElevatedButton.styleFrom(
                           primary: Color.fromARGB(255, 4, 133, 0)
                         ),
-                        onPressed: (){},
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => LibraryPage()));
+                        },
                         child: Text("Библиотека", ),
                       ),
                     )
