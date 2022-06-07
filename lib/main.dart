@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:univercity_application/pages/main_page.dart';
 
+import 'DI/locator.dart';
+
 void main() {
+  setup();
   runApp(const MyApp());
 }
 
@@ -11,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'МГГЭУ',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
