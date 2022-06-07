@@ -14,6 +14,7 @@ class TimeTable extends StatefulWidget{
 
 class _TimeTable extends State<TimeTable>{
   MainBloc? mainBloc;
+  bool isLoading = false;
   @override
   Widget build(BuildContext context) {
     
@@ -31,7 +32,10 @@ class _TimeTable extends State<TimeTable>{
           Expanded(
             child: Scrollbar(
               child: SingleChildScrollView(
-                child: Column(
+                child: Stack(
+                  children: [
+                                    
+                Column(
                   children: [
                     Text(textAlign: TextAlign.center,"Уважаемые преподаватели и студенты! Возможны изменения в расписании учебных занятий!", style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
                     Container(
@@ -51,6 +55,7 @@ class _TimeTable extends State<TimeTable>{
                                   const Text("Факультет социологии и журналистики:"),
                                   GestureDetector(onTap: (){
                                     //launchUrl(Uri.parse('http://www.mggeu.ru/wp-content/uploads/raspisanie/ochnoe/FSiJ_2021.xlsx'));
+                                    mainBloc!.download('http://www.mggeu.ru/wp-content/uploads/raspisanie/ochnoe/FSiJ_2021.xlsx', 'FSiJ_2021.xlsx');
                                   }, child: const Text("Скачать"))
                                   
                                 ])
@@ -62,6 +67,16 @@ class _TimeTable extends State<TimeTable>{
                     )
                   ],
                 ),
+              Visibility(
+                      child: Center(
+                          child: Container(
+                        width: 50,
+                        height: 50,
+                        child: Image.asset('assets/loading.gif'),
+                      )),
+                      visible: isLoading)
+                  ],
+                )
               )))]),
     );
   
@@ -69,6 +84,7 @@ class _TimeTable extends State<TimeTable>{
     );
   }
   _listener(BuildContext context, MainState state) {
+    isLoading = state.loading!;
     if(state.loading == true){
       return;
     }

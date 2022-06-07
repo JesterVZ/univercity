@@ -18,7 +18,7 @@ class MainBloc extends Bloc<Event, MainState>{
 
   Stream<MainState> _handleDownload(LoadEvent event) async*{
     yield state.copyWith(loading: true, error: null);
-    var result = await locator.get<httpClient>().download(event.url, event.filename);
-    
+    await locator.get<httpClient>().download(event.url, event.filename);
+    yield state.copyWith(loading: false, error: null);
   }
 }
