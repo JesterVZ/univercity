@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:univercity_application/pages/info.dart';
 import 'package:univercity_application/pages/more.dart';
 import 'package:univercity_application/pages/news.dart';
-import 'package:univercity_application/pages/tab_item.dart';
-import 'package:univercity_application/pages/tab_nav.dart';
+import 'package:univercity_application/pages/tabs/tab_item.dart';
+import 'package:univercity_application/pages/tabs/tab_nav.dart';
 import 'package:univercity_application/pages/timetable.dart';
 
-import 'bottom_nav.dart';
+import 'bottom_nav/bottom_nav.dart';
 
 class MainPage extends StatefulWidget {
   @override

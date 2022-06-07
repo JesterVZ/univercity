@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:univercity_application/pages/tab_item.dart';
+import 'package:univercity_application/pages/bottom_nav/bottom_nav.dart';
+import 'package:univercity_application/pages/tabs/tab_item.dart';
 
 class BottomNavigation extends StatelessWidget {
   BottomNavigation({

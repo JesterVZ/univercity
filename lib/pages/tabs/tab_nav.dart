@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:univercity_application/pages/news.dart';
 import 'package:univercity_application/pages/timetable.dart';
 
-import 'info.dart';
-import 'more.dart';
+import '../info.dart';
+import '../more.dart';
 
 class TabNavigatorRoutes {
   static const String root = '/';
