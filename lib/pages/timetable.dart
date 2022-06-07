@@ -42,6 +42,7 @@ class _TimeTable extends State<TimeTable>{
                       child: Column(
                         children: [
                           Text(textAlign: TextAlign.center, "Расписание очной формы обучения для бакалавриата", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                          
                           Table(
                             defaultVerticalAlignment: TableCellVerticalAlignment.middle,
                             border: TableBorder.all(),
